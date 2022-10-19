@@ -130,6 +130,15 @@ button{
     cursor: pointer;
 }
 
+p a{
+    color: white;
+    text-decoration: none;
+}
+
+p a:hover{
+    color: rgb(255, 74, 74);
+    font-weight: 700;
+}
 
 
 button:hover{

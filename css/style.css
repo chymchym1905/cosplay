@@ -1,0 +1,150 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Mono);
+
+*{
+    font-family: 'RobotoMono', monospace;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 8%;
+    align-items:flex-start;
+}
+
+.sometext{
+    margin :auto;
+    margin-top: 30px;
+    padding: 2%;
+    width: 75%;
+    text-align: center;
+    background:rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    color: white;
+}
+
+body{
+    content: "";
+    background: url(../images/1109233.jpg);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+}
+
+
+.logo{
+    cursor: pointer;
+    display: flex;
+    transition: 0.3s;
+}
+.logo:hover{
+    scale: 110%;
+}
+
+.nav{
+    padding: 20px 40px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.mylist-wrap{
+    width: 200px;
+    left:0;
+    right:0;
+    top:100%;
+    position: absolute;
+    max-height: 0px;
+    overflow: hidden;
+    transition: 0.5s;
+    border-radius: 20px;
+}
+
+.mylist-wrap.open{
+    max-height: 400px;
+}
+
+.mylist{
+    padding: 20px;
+    background: rgba(0, 0, 0, 1);
+}
+
+
+.spoiler{
+    background-color: black;
+    text-decoration: none;
+    color: black;
+    transition: none;
+}
+
+.spoiler:hover{
+    color: white;
+    text-decoration: none;
+}
+
+.mylist-link{
+    text-decoration: none;
+    color:rgba(250, 96, 183, 0.799);
+    transition: 0.4s;
+
+}
+
+.mylist-link:hover{
+    text-decoration: underline;
+    color:rgba(91, 43, 226, 0.799);
+}
+
+.mylist-link p{
+    width: 100%;
+    text-align: center;
+}
+
+select{
+    color: red;
+    font-weight: 600;
+    background: linear-gradient(rgba(237, 177, 117, 0.658),rgba(84, 140, 151, 0.948));
+    border-radius: 20px;
+    padding: 6px 10px;
+}
+
+
+
+button{
+    text-decoration: none;
+    border-radius: 12px; 
+    padding: 12px 25px;
+    background-color: aqua;
+    border: none;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+}
+
+
+
+button:hover{
+    background-color: rgb(31, 176, 176);
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 900px) {
+    .header{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    ul li{
+        display: block;
+    }
+}

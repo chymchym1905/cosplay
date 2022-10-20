@@ -28,13 +28,86 @@
   .column img {
     margin-top: 8px;
     vertical-align: baseline;
+    cursor: pointer;
+  }
+
+  .column img:hover {
+    transform:scale(1.01);
   }
 
   .footer {
     padding: 10px;
     text-align: center;
   }
+
+  .pop-up{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    z-index: 1;
+    visibility: hidden;
+    transition: all 0.2 ease;
+  }
+
+  .unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
   
+  .close{
+    position: absolute;
+    top:0;
+    right:20px;
+    font-size: 60px;
+    font-weight: bolder;
+    color: white;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  .pop-up img{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    border: 5px solid white;
+    border-radius: 12px;
+    height: 90%;
+    max-height: 900px;
+  }
+
+ .next{
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translate(0,-50%);
+    font-size: 60px;
+    font-weight: bolder;
+    color: white;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  .prev{
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translate(0,-50%);
+    font-size: 60px;
+    font-weight: bolder;
+    color: white;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+
   /* Responsive layout - makes a two column-layout instead of four columns */
   @media (max-width: 800px) {
     .column {
@@ -48,5 +121,9 @@
     .column {
       flex: 100%;
       max-width: 100%;
+    }
+    .close, .next, .prev{
+      font-size: 30px;
+      font-weight: bold;
     }
   }

@@ -13,6 +13,7 @@
   }
   
   .row {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     padding: 0 10px;
@@ -24,12 +25,6 @@
     max-width: 25%;
     padding: 0 10px;
   }
-
-  .biggestcol{
-    flex: 100%;
-    max-width: 100%;
-    padding: 0 10px;
-  }
   
   .column img {
     width: 100%;
@@ -39,20 +34,102 @@
     cursor: pointer;
   }
 
+  .column img:hover {
+    transform:scale(1.01);
+  }
+  
+
+ .thirty-percent-extra-row{
+    flex: 33.33%;
+    padding: 0 10px;
+    max-width: 33.33%;
+  }
+
+  .thirty-percent-extra-row img{
+    width: 100%;
+    height: 600px;
+    margin: 8px;
+    object-fit: cover;
+    cursor: pointer;
+  }
+
+  .thirty-percent-extra-row img:hover{
+    transform:scale(1.01);
+  }
+
+  .row-with-2-col{
+    flex: 50%;
+    padding: 0 10px;
+    max-width: 50%;
+  }
+
+  .row-with-2-col img{
+    width: 100%;
+    height: 620px;
+    margin: 8px;
+    object-fit: cover;
+    cursor: pointer;
+  }
+
+  .row-with-2-col img:hover{
+    transform:scale(1.01);
+  }
+
+  .biggestcol{
+    flex: 100%;
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
   .biggestcol img{
-    display: block;
-    margin:auto;
-    height: 680px;
+    width: 580px;
+    height: auto;
+    margin: 0 50%;
+    transform: translate(-50%,0);
+    object-fit: cover;
     cursor: pointer;
   }
 
   .biggestcol img:hover{
-    transform:scale(1.01);
+
+    transform:scale(1.01), translate(-50%,0);
   }
 
-  .column img:hover {
-    transform:scale(1.01);
+   /* ////////////////////////////////////////////// */
+
+  /* .item1 {
+    grid-area: 'pic1'
+
   }
+  
+  .item2{
+    grid-area: 'pic2' ;
+  }
+
+  .items3{
+    grid-area: 'pic3';
+  }
+
+
+  .grid-disp {
+    margin-left:10px;
+    display: grid;
+    grid-template-areas: 
+    'pic1 pic1 pic3 pic3'
+    'pic2 pic2 pic2 pic2';
+
+
+    padding: 20px 0;
+    gap: 10px;
+  }
+
+.grid-disp > img{
+  padding: 0 10px;
+  width: 400px;
+	object-fit: cover;
+} */
+
+  /* ////////////////////////////////////////////// */
 
   .footer {
     padding: 10px;
@@ -133,6 +210,11 @@
       flex: 50%;
       max-width: 50%;
     }
+
+    .row-with-2-col img{
+      height: 580px;
+    }
+
   }
   
   /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
@@ -141,6 +223,20 @@
       flex: 100%;
       max-width: 100%;
     }
+    .row-with-2-col {
+      flex: 100%;
+      max-width: 100%;
+    }
+
+    .row-with-2-col img{
+      height: 580px;
+    }
+
+    .thirty-percent-extra-row{
+      flex: 100%;
+      max-width: 100%;
+    }
+
     .close, .next, .prev{
       font-size: 30px;
       font-weight: bold;

@@ -24,11 +24,30 @@
     max-width: 25%;
     padding: 0 10px;
   }
+
+  .biggestcol{
+    flex: 100%;
+    max-width: 100%;
+    padding: 0 10px;
+  }
   
   .column img {
-    margin-top: 8px;
-    vertical-align: baseline;
+    width: 100%;
+    height: 580px;
+    margin: 8px;
+    object-fit: cover;
     cursor: pointer;
+  }
+
+  .biggestcol img{
+    display: block;
+    margin:auto;
+    height: 680px;
+    cursor: pointer;
+  }
+
+  .biggestcol img:hover{
+    transform:scale(1.01);
   }
 
   .column img:hover {

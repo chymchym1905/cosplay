@@ -27,7 +27,7 @@ function getWinDim(){
     }
 }
 
-document.querySelectorAll('.column img').forEach( img=> {
+document.querySelectorAll('.column img, .biggestcol img').forEach( img=> {
     img.onclick = () =>{
         document.querySelector('.pop-up img').src = img.getAttribute('src');
         resize(document.querySelector('.pop-up img'));
@@ -36,6 +36,20 @@ document.querySelectorAll('.column img').forEach( img=> {
         slideIndex = img.getAttribute('id');
     }
 });
+
+document.querySelectorAll('.column img').forEach( gridimd =>{
+    gridimd.onload = () =>{
+        console.log(gridimd.naturalWidth + " and " + gridimd.naturalHeight + " "+ gridimd.getAttribute('id'));
+        if(gridimd.naturalWidth > gridimd.naturalHeight){
+            gridimd.style.height = '240px';
+            if(gridimd.getAttribute('id')>picCount-4){
+                gridimd.style.height = '580px';
+            }
+        }
+    }
+});
+
+
 
 document.querySelector('.close').onclick = () =>{
     document.querySelector('.pop-up').style.visibility = 'hidden';

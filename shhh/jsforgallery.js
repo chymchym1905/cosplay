@@ -1,5 +1,5 @@
 let slideIndex = 1;
-let picCount = document.querySelectorAll('.column img').length;
+let picCount = document.querySelectorAll('.column img, .row-with-2-col img, .biggestcol img, .thirty-percent-extra-row img').length;
 
 
 window.onresize = window.onload = function(){

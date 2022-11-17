@@ -62,7 +62,7 @@ document.querySelectorAll('.column img, .biggestcol img').forEach( gridimd =>{
         console.log(gridimd.naturalWidth + " and " + gridimd.naturalHeight + " "+ gridimd.getAttribute('id'));
         if(gridimd.naturalWidth > gridimd.naturalHeight){
             gridimd.style.height = '240px';
-            if(gridimd.getAttribute('id')>picCount-4){
+            if(gridimd.getAttribute('id')>picCount-5){
                 gridimd.style.height = '580px';
             }
         }
